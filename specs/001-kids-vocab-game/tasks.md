@@ -30,6 +30,7 @@ description: "Task list for feature implementation"
 - [ ] T034 [P] Dependency offline audit: verify each third-party package for network behavior, document findings in `specs/001-kids-vocab-game/docs/dependency-audit.md`, and list any packages requiring opt-in exceptions.
 - [ ] T035 [P] Runtime network-blocking smoke test and CI assertion: add scanner script `scripts/network_smoke_test.dart` and CI job `.github/workflows/flutter.yml` that runs it and fails on suspicious network patterns.
 - [ ] T036 [P] Storage-corruption & low-disk tests: add tests that simulate corrupted JSON and low-disk conditions and assert safe failure modes and backups (`mobile/test/migrations/` and `mobile/test/storage/`).
+ - [ ] T036 [P] Storage-corruption & low-disk tests: add tests that simulate corrupted JSON and low-disk conditions and assert safe failure modes and backups (`mobile/test/migrations/` and `mobile/test/storage/`). Acceptance: placeholder tests created and to be wired once `storage_service.dart` exists.
 - [ ] T037 [P] ASR test harness & corpus: define an ASR test corpus and harness (`specs/001-kids-vocab-game/tests/asr/`), implement automated verification tests that validate SC-002 per platform.
 
 **Checkpoint**: Foundational work complete — user stories may begin after T011 and T006..T007 are in place
