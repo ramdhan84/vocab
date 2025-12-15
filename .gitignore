@@ -1,0 +1,35 @@
+# Flutter/Dart
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.metadata
+**/pubspec.lock
+**/ios/Pods/
+**/android/.gradle/
+**/android/app/release/
+
+# Node/Universal
+node_modules/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Env & Secrets
+.env*
+
+# Coverage & Reports
+coverage/
+reports/
+
+# App files
+mobile/files/
