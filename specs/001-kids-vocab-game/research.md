@@ -54,6 +54,13 @@
 - Decide on state management (Riverpod vs Provider vs Bloc) and document reasons.
 - Prepare a small sample asset set (images + short audio) for design and QA.
 
+## Research Tasks (Actionable)
+
+- Research: "Minimum supported Android/iOS versions and package compatibility" — verify the earliest OS versions we must support and whether chosen packages function offline on those versions.
+- Research: "speech_to_text offline accuracy and fallback heuristics" — test on representative devices to measure confidence scores and define low-confidence thresholds and typed-fallback UX.
+- Research: "State management choice" — compare Riverpod, Provider, and Bloc for testability, bundle size, and developer ergonomics; recommend one.
+- Task: "Create sample asset set" — prepare 20 child-appropriate images and 20 short TTS audio samples for QA and early UX testing.
+
 ## Output
 
 Decision summary: Proceed with on-device ASR + typed fallback, device TTS, mixed images, JSON file storage, and a small selection of recommended Flutter packages to evaluate and adopt during Phase 1.
