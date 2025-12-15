@@ -75,6 +75,13 @@
 - What happens when [boundary condition]?
 - How does system handle [error scenario]?
 
+## Constraints (mandatory)
+
+- **Platform**: MUST be implemented in Flutter and Dart. Document the Flutter SDK and Dart versions used.
+- **Offline**: MUST work fully offline; network access is disallowed for core functionality.
+- **Storage**: All persistent data MUST be stored locally using files in the app's private storage. No external databases or cloud storage.
+- **Privacy**: No personal data collection by default; any sharing is explicit, opt-in, and operates on local data only.
+
 ## Requirements *(mandatory)*
 
 <!--
@@ -89,6 +96,9 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+
+- **FR-006**: The app MUST persist vocabulary content and user progress to local files and support safe migrations.
+- **FR-007**: The app MUST expose accessibility metadata (semantics) for major UI components.
 
 *Example of marking unclear requirements:*
 

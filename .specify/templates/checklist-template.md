@@ -26,6 +26,12 @@
 - [ ] CHK002 Second checklist item
 - [ ] CHK003 Third checklist item
 
+## Safety & Offline
+
+- [ ] CHK101 Verify offline behavior for primary user journeys
+- [ ] CHK102 Verify local storage format and migration tests exist
+- [ ] CHK103 Verify accessibility checks (semantics, contrast, touch targets)
+
 ## [Category 2]
 
 - [ ] CHK004 Another category item

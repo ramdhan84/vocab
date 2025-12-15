@@ -62,12 +62,12 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T004 Setup Flutter project scaffold and baseline architecture (app module, packages, assets)
+- [ ] T005 [P] Initialize local file storage module and define on-disk formats and migration strategy
+- [ ] T006 [P] Configure CI for Flutter tests, static analysis, and widget test runners
+- [ ] T007 Create base models/entities (e.g., `VocabularyItem`, `Progress`) that all stories depend on
+- [ ] T008 Configure error handling, local backups/exports, and graceful recovery from corruption
+- [ ] T009 Accessibility baseline: semantics, touch target sizing, and a test checklist
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 

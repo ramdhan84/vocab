@@ -4,7 +4,8 @@ Auto-generated from all feature plans. Last updated: [DATE]
 
 ## Active Technologies
 
-[EXTRACTED FROM ALL PLAN.MD FILES]
+- **Flutter** — Primary UI framework (Dart). Plans MUST document the Flutter SDK and Dart versions used.
+- **Dart** — Language runtime used by Flutter.
 
 ## Project Structure
 
@@ -14,7 +15,9 @@ Auto-generated from all feature plans. Last updated: [DATE]
 
 ## Commands
 
-[ONLY COMMANDS FOR ACTIVE TECHNOLOGIES]
+- `flutter test` — run unit and widget tests
+- `flutter analyze` — run static analysis (Dart analyzer / linter)
+- `flutter build <platform>` — build artifacts (document CI build steps in plan)
 
 ## Code Style
 

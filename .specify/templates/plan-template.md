@@ -30,8 +30,16 @@
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+The implementation plan MUST verify the following gates (derived from the project constitution):
+
+- **Flutter-Only**: Language/Version must document Flutter/Dart versions and justify any native code exceptions.
+- **Offline-First**: The design must use local file storage only (no backend or external services).
+- **Kid-Safe UX**: Accessibility and child-friendly UX validation (semantics, touch targets, parental controls) are required.
+- **Test Coverage**: Unit and widget tests must be planned for core flows; storage migrations must include automated tests.
+
+These gates must be addressed in the plan before moving past Phase 0.
 
 ## Project Structure
 
