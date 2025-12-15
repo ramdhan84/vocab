@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Profile Collection",
+  "type": "object",
+  "required": ["schemaVersion", "profiles"],
+  "properties": {
+    "schemaVersion": { "type": "integer" },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "displayName", "createdAt"],
+        "properties": {
+          "id": { "type": "string" },
+          "displayName": { "type": "string", "minLength": 1 },
+          "avatarPath": { "type": ["string", "null"] },
+          "highScore": { "type": "integer" },
+          "history": { "type": "array", "items": { "type": "string" } },
+          "createdAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

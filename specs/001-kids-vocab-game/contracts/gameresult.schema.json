@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GameResult",
+  "type": "object",
+  "required": ["id", "profileId", "scoreDelta", "timestamp"],
+  "properties": {
+    "id": { "type": "string" },
+    "profileId": { "type": "string" },
+    "scoreDelta": { "type": "integer" },
+    "correctCount": { "type": "integer" },
+    "incorrectCount": { "type": "integer" },
+    "wordsEncountered": { "type": "array", "items": { "type": "string" } },
+    "timestamp": { "type": "string", "format": "date-time" }
+  }
+}

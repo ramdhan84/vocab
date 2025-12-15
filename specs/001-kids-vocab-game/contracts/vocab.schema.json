@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vocabulary Collection",
+  "type": "object",
+  "required": ["schemaVersion", "vocab"],
+  "properties": {
+    "schemaVersion": { "type": "integer" },
+    "vocab": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "wordText", "imagePath", "createdAt"],
+        "properties": {
+          "id": { "type": "string" },
+          "wordText": { "type": "string", "minLength": 1 },
+          "imagePath": { "type": "string" },
+          "audioPath": { "type": ["string", "null"] },
+          "createdAt": { "type": "string", "format": "date-time" },
+          "updatedAt": { "type": ["string", "null"], "format": "date-time" },
+          "metadata": { "type": "object" }
+        }
+      }
+    }
+  }
+}
