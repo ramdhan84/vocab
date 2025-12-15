@@ -100,8 +100,7 @@ As a player, I can create a profile and view my score history so multiple childr
 
 - **FR-006**: The app MUST persist vocabulary content and user progress to local files (exportable/importable JSON) and support safe migrations with automated tests.
 - **FR-007**: The app MUST expose accessibility metadata (semantics) for major UI components and meet basic contrast/touch target sizes for children.
-- **FR-008**: Users MUST be able to add, edit, and delete vocabulary items; each item MUST include a text word and an associated image.
-- **FR-009**: The app MUST allow creating and selecting profiles; scores MUST be tracked per profile and persist locally.
+<!-- FR-008 and FR-009 were duplicates of FR-001 and FR-004 and have been consolidated. -->
 - **FR-010**: The app MUST provide a Play Mode that selects random words, plays audio for the word on-demand, accepts spoken answers (or typed alternatives), and updates score accordingly.
 - **FR-011**: The app MUST include a "listen" control to play the word audio and a visual feedback for correct/incorrect answers.
 - **FR-012**: Sounds and backgrounds used in Play Mode MUST be local bundled assets; user-supplied assets are allowed but optional.
@@ -146,7 +145,9 @@ Although the app is Offline-First, the product MAY offer optional online augment
 ### Measurable Outcomes
 
 - **SC-001**: Users can add a new vocabulary item (word + image) and see it appear in the collection within 2 minutes (measured by manual UI test).
-- **SC-002**: Play Mode evaluates answers and updates score correctly in 95% of automated verification tests (seeded set of spoken or typed answers).
-- **SC-003**: App supports full offline operation: all primary flows (manage collection, play, profile selection) function without network access.
-- **SC-004**: Scores and progress persist across app restarts and device reboots for the active profile.
-- **SC-005**: Accessibility: Primary screens expose semantics and are navigable with screen reader (manual verification checklist).
+- **SC-002**: Play Mode ASR correctness — Using a seeded test corpus and harness (see `specs/001-kids-vocab-game/tests/asr/README.md`), on-device ASR + fuzzy-matching must correctly evaluate spoken answers at ≥85% per supported device family. For devices without ASR, typed-answer evaluation must be ≥99%.
+- **SC-003**: Play Mode typed-answer correctness — Typed answers in Play Mode must be evaluated correctly at ≥99% in automated tests.
+- **SC-004**: App supports full offline operation: all primary flows (manage collection, play, profile selection) function without network access.
+- **SC-005**: Scores and progress persist across app restarts and device reboots for the active profile.
+- **SC-006**: Accessibility: Primary screens expose semantics and are navigable with screen reader (manual verification checklist).
+- **SC-007**: Offline verification — With network disabled (airplane mode or equivalent), all primary flows must continue to function; CI must include a network-off smoke test.
