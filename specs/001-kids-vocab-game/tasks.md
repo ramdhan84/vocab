@@ -25,10 +25,10 @@ description: "Task list for feature implementation"
 - [ ] T008 [P] Add `mobile/assets/` and add a placeholder `mobile/assets/README.md` plus sample asset manifest `mobile/assets/manifest.json`
 - [ ] T009 [P] Create `mobile/lib/services/image_service.dart` for image import/resizing and `mobile/test/services/image_service_test.dart`
 - [ ] T010 [P] Create `mobile/lib/services/tts_service.dart` (TTS wrapper) and `mobile/test/services/tts_service_test.dart`
-- [ ] T011 [P] Create initial CI workflow `.github/workflows/flutter.yml` to run `flutter analyze` and `flutter test` (include a network-off smoke job — see T035)
+- [ ] T011 [P] Create initial CI workflow `.github/workflows/flutter.yml` to run `flutter analyze` and `flutter test` (include a network-off smoke job — see T035). Acceptance: CI passes on branch `001-kids-vocab-game`.
 - [ ] T012 Accessibility baseline: Add `mobile/test/accessibility/accessibility_test.dart` and enforce touch target and semantics checks
 - [ ] T034 [P] Dependency offline audit: verify each third-party package for network behavior, document findings in `specs/001-kids-vocab-game/docs/dependency-audit.md`, and list any packages requiring opt-in exceptions.
-- [ ] T035 [P] Runtime network-blocking smoke test and CI assertion: add tests that run the app with network disabled and fail CI on any outbound network activity or unexpected behavior (`.github/workflows/flutter.yml` must include this job).
+- [ ] T035 [P] Runtime network-blocking smoke test and CI assertion: add scanner script `scripts/network_smoke_test.dart` and CI job `.github/workflows/flutter.yml` that runs it and fails on suspicious network patterns.
 - [ ] T036 [P] Storage-corruption & low-disk tests: add tests that simulate corrupted JSON and low-disk conditions and assert safe failure modes and backups (`mobile/test/migrations/` and `mobile/test/storage/`).
 - [ ] T037 [P] ASR test harness & corpus: define an ASR test corpus and harness (`specs/001-kids-vocab-game/tests/asr/`), implement automated verification tests that validate SC-002 per platform.
 
