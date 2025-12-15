@@ -82,6 +82,7 @@ As a player, I can create a profile and view my score history so multiple childr
 - **Offline**: MUST work fully offline; network access is disallowed for core functionality.
 - **Storage**: All persistent data MUST be stored locally using files in the app's private storage. No external databases or cloud storage.
 - **Privacy**: No personal data collection by default; any sharing is explicit, opt-in, and operates on local data only.
+ - **UX Design Reference**: See `specs/001-kids-vocab-game/design.md` for visuals, sounds, onboarding, accessibility, performance budgets, device form factors, and fallback behaviors.
 
 ## Requirements *(mandatory)*
 
@@ -123,6 +124,12 @@ Although the app is Offline-First, the product MAY offer optional online augment
 - Must not share personal data; any uploads must be explicit and limited to non-identifying content.  
 - Adding an online augmentation requires an accompanying privacy assessment and product owner sign-off.
 
+### Onboarding & Parental UX
+
+- First-run flow includes profile selection/creation and a short tutorial (add word → play → listen).
+- Parental area is gated (long-press + simple math challenge), providing export/import, reset, difficulty, mute/reduced-motion, and opt-in online augmentation toggle.
+
+
 *Example of marking unclear requirements:*
 
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
@@ -134,6 +141,11 @@ Although the app is Offline-First, the product MAY offer optional online augment
 - **Profile**: Represents a player. Attributes: `id`, `displayName`, optional `avatarPath`, `highScore`, `history` (list of GameResult references).
 - **GameResult**: Represents a play session result. Attributes: `profileId`, `scoreDelta`, `timestamp`, `correctCount`, `incorrectCount`, `wordsEncountered`.
 - **AppSettings**: Device and parental settings (sound on/off, difficulty, auto-listen, accessibility toggles).
+
+### Accessibility & Performance
+
+- Accessibility: semantics for controls and images; WCAG AA contrast; min 56dp touch targets; logical focus order.
+- Performance: UI target 60fps; reduced-motion caps animations at 30fps; ASR/TTS latency budgets documented.
 
 ## Success Criteria *(mandatory)*
 
